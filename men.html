@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="men.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="navbar1">Home</a>
+    <a href="men.html" class="navbar1">Men</a>
+    <a href="women.html" class="navbar1">Women</a>
+    <div class="title">VAULT</div>
+</header>
+
+<main>
+    <h1>Men Collection</h1>
+    <div id="product-grid"></div>
+</main>
+
+<script>
+    var itemData = [
+        {
+            image: "images/classic.jpg",
+            name: "Classic Suit",
+            price: "$129.99"
+        },
+        {
+            image: "images/kurta.jpeg",
+            name: "Traditional Kurta",
+            price: "$79.99"
+        },
+        {
+            image: "images/blazer.jpg",
+            name: "Modern Blazer",
+            price: "$99.99"
+        },
+        {
+            image: "images/shirt.jpg",
+            name: "Formal Shirt",
+            price: "$20.99"
+        },
+        {
+            image: "images/shoe.jpg",
+            name: "shoe",
+            price: "$49.99"
+        },
+        {
+            image: "images/jean jacket.jpg",
+            name: "jean jacket",
+            price: "$11.99"
+        },
+        {
+            image: "images/trouser.jpg",
+            name: "Trouser",
+            price: "$12.99"
+        },
+        {
+            image: "images/woolen jacket.jpg",
+            name: "woolen jacket",
+            price: "$24.99"
+        },
+        {
+            image: "images/tie.jpg",
+            name: "Tie",
+            price: "$24.99"
+        },
+        {
+            image: "images/lether belt.jpg",
+            name: "Belt",
+            price: "$24.99"
+        },
+         {
+            image: "images/sock.jpg",
+            name: "sock",
+            price: "$24.99"
+        },
+        {
+            image: "images/thermocot.webp",
+            name: "Thermocot",
+            price: "$24.99"
+        }, 
+        {
+            image: "images/sleeveless half jacket.webp",
+            name: "Sleeveless Half Jacket",
+            price: "$24.99"
+        },
+        {
+            image: "images/baggy pant.webp",
+            name: "Baggy Pant",
+            price: "$24.99"
+        },
+        {
+            image: "images/turtleneck sweeter.webp",
+            name: "Highneck Turtleneck Sweeter",
+            price: "$24.99"
+        },
+        {
+            image: "images/plain cotton tshirt.webp",
+            name: "Plain Cotton T-Shirt",
+            price: "$24.99"
+        },
+    ];
+
+    var container = document.getElementById("product-grid");
+
+    for (var i = 0; i < itemData.length; i++) {
+
+        var card = document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = `
+            <img src="${itemData[i].image}"alt="${itemData[i].name}">
+            <h3>${itemData[i].name}</h3>
+            <p class="product-price">${itemData[i].price}</p>
+            <div 
+                class="product-buttons">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        `;
+
+        container.appendChild(card);
+    }
+</script>
+
+</body>
+</html>
